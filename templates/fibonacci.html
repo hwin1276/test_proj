@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Fibonacci Sequence {% endblock %}</h1>
+    
+    <form action="{{ url_for('fibonacci') }}" method = "POST">
+        <h2>For F(x) = F(x-y) + F(x-z):</h2>
+        <label for="x">Enter x:</label>
+        <input type="number" id="x" name="x"><br><br>
+        <label for="y">Enter y:</label>
+        <input type="number" id="y" name="y"><br><br>
+        <label for="z">Enter z:</label>
+        <input type="number" id="z" name="z"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <h3>F({{ finput }}): {{ result }} </h3>
+    
+{% endblock %}

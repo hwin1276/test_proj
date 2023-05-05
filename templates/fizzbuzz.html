@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} FizzBuzz {% endblock %}</h1>
+    
+    <form action="{{ url_for('fizzbuzz') }}" method = "POST">
+        <label for="input">Enter number:</label>
+        <input type="number" id="input" name="input"><br><br>
+
+        <p><strong>Enter the divisors: </strong></p>
+        <label for="first">First divisor:</label>
+        <input type="number" id="first" name="first" value="3"><br><br>
+        <label for="second">Second divisor:</label>
+        <input type="number" id="second" name="second" value="5"><br><br>
+
+        <p><strong>Enter substitute phrases for fizz and buzz: </strong></p>
+        <label for="phrase1">First phrase:</label>
+        <input type="text" id="phrase1" name="phrase1" value="Fizz"><br><br>
+        <label for="phrase2">Second phrase:</label>
+        <input type="text" id="phrase2" name="phrase2" value="Buzz"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h3>Result: {{ result }} </h3>
+    
+{% endblock %}
