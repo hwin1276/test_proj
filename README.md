@@ -1,4 +1,4 @@
-Used VS Code
+Used Flask and VS code
 
 To run:
 1. Open new terminal
